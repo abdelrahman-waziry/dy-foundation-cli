@@ -1,5 +1,6 @@
 # DY Foundation CLI
-
+### Installation: 
+`npm install -g dy-foundation-cli`
 ### Commands: 
 - `create-component`
 ```javascript
