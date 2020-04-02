@@ -1,0 +1,40 @@
+{
+  "author": "Abdelrahman Waziry",
+  "bin": {
+    "dy": "./index.js"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "commander": "^4.1.0",
+    "inquirer": "^7.0.3",
+    "ora": "^4.0.3",
+    "shelljs": "^0.8.3"
+  },
+  "deprecated": false,
+  "description": "A command-line interface to automate set of commands related to foundation project",
+  "keywords": [
+    "cli",
+    "node",
+    "foundation"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "dy-foundation-cli",
+  "scripts": {
+    "test": "test"
+  },
+  "version": "0.0.7",
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdelrahman-waziry/dy-foundation-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/abdelrahman-waziry/dy-foundation-cli/issues"
+  },
+  "homepage": "https://github.com/abdelrahman-waziry/dy-foundation-cli#readme"
+}
