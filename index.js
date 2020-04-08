@@ -39,10 +39,9 @@ program.command('build <version>')
         .alias('b')
         .description('Creates a new build of a foundation based project')
         .action((version) => {
-          if(version){
+          try {
             build(version)
-          }
-          else {
+          } catch (error) {
             inquirer.prompt([{type: 'list', name: 'version', message: 'Please select a version type', choices: ['major', 'minor', 'patch']}]).then((answers) => {
               build(answers.version)
             })
