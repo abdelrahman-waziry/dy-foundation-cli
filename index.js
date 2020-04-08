@@ -2,6 +2,7 @@
 
 const fs = require('fs')
 const program = require('commander')
+const inquirer = require('inquirer')
 const {createComponent} = require('./lib/commands/create-component')
 const init = require('./lib/commands/init')
 const build = require('./lib/commands/build')
@@ -34,10 +35,17 @@ program.command('init <name>')
           init(name)
         })
 
-program.command('build')
+program.command('build <version>')
         .alias('b')
         .description('Creates a new build of a foundation based project')
-        .action(() => {
-          build()
+        .action((version) => {
+          if(version){
+            build(version)
+          }
+          else {
+            inquirer.prompt([{type: 'list', name: 'version', message: 'Please select a version type', choices: ['major', 'minor', 'patch']}]).then((answers) => {
+              build(answers.version)
+            })
+          }
         })
 program.parse(process.argv);
