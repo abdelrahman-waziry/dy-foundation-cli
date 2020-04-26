@@ -31,7 +31,7 @@ program.command('create-component <name>')
 
 program.command('create-module <name>')
         .alias('cm')
-        .description('Creates a new component')
+        .description('Creates a new module')
         .action((name) => {
           createModule(name)
         })
