@@ -4,6 +4,7 @@ const fs = require('fs')
 const program = require('commander')
 const inquirer = require('inquirer')
 const {createComponent} = require('./lib/commands/create-component')
+const createModule = require('./lib/commands/create-module')
 const init = require('./lib/commands/init')
 const build = require('./lib/commands/build')
 
@@ -26,6 +27,13 @@ program.command('create-component <name>')
         .description('Creates a new component')
         .action((name, args) => {
           createComponent(name, args.view)
+        })
+
+program.command('create-module <name>')
+        .alias('cm')
+        .description('Creates a new component')
+        .action((name) => {
+          createModule(name)
         })
 
 program.command('init <name>')
