@@ -11,6 +11,16 @@ Options:
   -v, --view   Create a new view
   -h, --help   output usage information
 ```
+
+- `create-module`
+```javascript
+Usage: index create-module|cm [options] <name>
+
+Creates a new module
+
+Options:
+  -h, --help  output usage information
+```
 - `version`
 ```javascript
 Usage: index version|v [options]
